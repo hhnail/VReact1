@@ -1,20 +1,25 @@
 import React from 'react';
-import { PageContainer } from '@ant-design/pro-layout';
-import { Card, Alert, Typography } from 'antd';
-import { useIntl, FormattedMessage } from 'umi';
+import {PageContainer} from '@ant-design/pro-layout';
+import {Card, Alert, Typography} from 'antd';
+import {useIntl, FormattedMessage} from 'umi';
 import styles from './Welcome.less';
 
-const CodePreview: React.FC = ({ children }) => (
+/** 代码预览组件
+ * @param children 子节点
+ * @constructor
+ */
+const CodePreview: React.FC = ({children}) => (
   <pre className={styles.pre}>
     <code>
-      <Typography.Text copyable>{children}</Typography.Text>
+      <Typography.Text copyable>
+        {children}
+      </Typography.Text>
     </code>
   </pre>
 );
 
 const Welcome: React.FC = () => {
   const intl = useIntl();
-
   return (
     <PageContainer>
       <Card>
@@ -31,30 +36,27 @@ const Welcome: React.FC = () => {
             marginBottom: 24,
           }}
         />
+
+
+        {/*加粗*/}
         <Typography.Text strong>
-          <FormattedMessage id="pages.welcome.advancedComponent" defaultMessage="Advanced Form" />{' '}
-          <a
-            href="https://procomponents.ant.design/components/table"
-            rel="noopener noreferrer"
-            target="__blank"
+          <FormattedMessage id="pages.welcome.advancedComponent" defaultMessage="Advanced Form"/>{' '}
+          <a href="https://procomponents.ant.design/components/table"
+             rel="noopener noreferrer"
+             target="__blank"
           >
-            <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
+            <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome"/>
           </a>
         </Typography.Text>
+        {/*代码预览*/}
         <CodePreview>yarn add @ant-design/pro-table</CodePreview>
-        <Typography.Text
-          strong
-          style={{
-            marginBottom: 12,
-          }}
-        >
-          <FormattedMessage id="pages.welcome.advancedLayout" defaultMessage="Advanced layout" />{' '}
-          <a
-            href="https://procomponents.ant.design/components/layout"
-            rel="noopener noreferrer"
-            target="__blank"
-          >
-            <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome" />
+
+
+        {/*加粗*/}
+        <Typography.Text strong style={{marginBottom: 12,}}>
+          <FormattedMessage id="pages.welcome.advancedLayout" defaultMessage="Advanced layout"/>{' '}
+          <a href="https://procomponents.ant.design/components/layout" rel="noopener noreferrer" target="__blank">
+            <FormattedMessage id="pages.welcome.link" defaultMessage="Welcome"/>
           </a>
         </Typography.Text>
         <CodePreview>yarn add @ant-design/pro-layout</CodePreview>
