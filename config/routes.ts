@@ -53,6 +53,12 @@
     icon: 'smile',
     component: './Api',
   },
+  {
+    path: '/test',
+    name: '测试请求后端',
+    icon: 'smile',
+    component: './Test',
+  },
   // 根目录。访问欢迎页面
   {
     path: '/',

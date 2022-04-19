@@ -1,6 +1,8 @@
 import React from "react";
-
 import {Card, Row, Col, Space, Tree} from 'antd';
+import {useRequest} from "@@/plugin-request/request";
+import {request} from "umi";
+
 
 const {DirectoryTree} = Tree;
 const treeData = [
@@ -40,6 +42,7 @@ const treeData = [
 
 
 const Api: React.FC = () => {
+
   return (
     <>
       <div style={{

@@ -1,17 +1,12 @@
-import {request} from "@@/plugin-request/request";
-import {stringify} from "querystring";
-import stringMatching = jasmine.stringMatching;
-
-const DataApiTree = {
-  url: string,
-  name? : string,
-}
+import axios from "axios";
 
 /**
  * 获取数据API组（树结构）
  */
 export function getApiGroupTree() {
-  return request<Record<any, any>>('/vapi/getApiGroupTree', {
-    method: 'POST',
-  });
+  return axios.post('/vapi/getApiGroupTree')
+}
+
+export function demoMp() {
+  return axios.get("localhost:8080/vapi/demoMp")
 }
