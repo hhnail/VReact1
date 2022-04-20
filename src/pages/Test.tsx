@@ -8,15 +8,15 @@ const Test: React.FC = () => {
   const [dataSource,setDataSource] = useState([])
 
   useEffect(() => {
-    getApiGroupTree().then(resp=>{
-
-        const {data} = resp
-        setDataSource(data)
-
-      console.log(data)
-
-    })
-  });
+    // getApiGroupTree().then(resp=>{
+    //
+    //     const {data} = resp
+    //     setDataSource(data)
+    //
+    //   console.log(data)
+    //
+    // })
+  },[]);
 
 
   const columns = [
@@ -44,6 +44,7 @@ const Test: React.FC = () => {
     }}>
       <Table dataSource={dataSource}
              columns={columns}
+             showSorterTooltip={true}
              pagination={{
         pageSize:5
       }}

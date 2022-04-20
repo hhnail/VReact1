@@ -38,7 +38,7 @@ const Welcome: React.FC = () => {
         />
 
 
-        {/*加粗*/}
+        {/*排版。文本加粗*/}
         <Typography.Text strong>
           <FormattedMessage id="pages.welcome.advancedComponent" defaultMessage="Advanced Form"/>{' '}
           <a href="https://procomponents.ant.design/components/table"
@@ -52,7 +52,7 @@ const Welcome: React.FC = () => {
         <CodePreview>yarn add @ant-design/pro-table</CodePreview>
 
 
-        {/*加粗*/}
+        {/*排版。文本加粗*/}
         <Typography.Text strong style={{marginBottom: 12,}}>
           <FormattedMessage id="pages.welcome.advancedLayout" defaultMessage="Advanced layout"/>{' '}
           <a href="https://procomponents.ant.design/components/layout" rel="noopener noreferrer" target="__blank">

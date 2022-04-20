@@ -41,9 +41,9 @@
   },
   // 访问表格组件
   {
+    path: '/list',
     name: 'list.table-list',
     icon: 'table',
-    path: '/list',
     component: './TableList',
   },
   // 测试路由
@@ -51,13 +51,7 @@
     path: '/api',
     name: 'API',
     icon: 'smile',
-    component: './Api',
-  },
-  {
-    path: '/test',
-    name: '测试请求后端',
-    icon: 'smile',
-    component: './Test',
+    component: './DataApi',
   },
   // 根目录。访问欢迎页面
   {
